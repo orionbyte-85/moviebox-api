@@ -1,144 +1,247 @@
 <div align="center">
 
-# moviebox-api
+# 🎬 Moviebox Enhanced
 
-**Unofficial Python wrapper for moviebox.ph**  
-Search, discover, download, and stream movies & TV series with subtitles
+**Ultimate Python wrapper for moviebox.ph with Enhanced Interactive TUI**
 
 [![PyPI version](https://badge.fury.io/py/moviebox-api.svg)](https://pypi.org/project/moviebox-api)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/moviebox-api)](https://pypi.org/project/moviebox-api)
-![Coverage](https://raw.githubusercontent.com/Simatwa/moviebox-api/refs/heads/main/assets/coverage.svg)
-[![PyPI - License](https://img.shields.io/pypi/l/moviebox-api)](https://pypi.org/project/moviebox-api)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://unlicense.org/)
 [![Downloads](https://pepy.tech/badge/moviebox-api)](https://pepy.tech/project/moviebox-api)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
-[Features](#-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Usage](#-usage) • [Documentation](#-documentation)
+**Search • Download • Stream** movies and TV series with a beautiful terminal interface
+
+[Features](#-features) • [Installation](#-installation) • [Quick Start](#-quick-start) • [Documentation](#-documentation)
+
+![Demo](https://img.shields.io/badge/Status-Production%20Ready-brightgreen)
 
 </div>
 
-## Features
+---
 
--  **Download Movies & TV Series** - High-quality downloads with multiple resolution options
--  **Subtitle Support** - Download subtitles in multiple languages
--  **Stream with MPV or VLC** - Watch directly without downloading (CLI only)
--  **Super Fast Downloads** - Over 5x faster than standard downloads
--  **Async & Sync Support** - Fully asynchronous with synchronous fallback
--  **Interactive Menu** - User-friendly TUI for easy navigation
--  **Search & Discovery** - Find movies, trending content, and popular searches
--  **Developer-Friendly** - Clean Python API with Pydantic models 
+## ✨ What's New in Enhanced Edition
 
+🚀 **Streamlined TV Series UX** - Direct episode access, skip menus!  
+🎨 **Animation Search** - Dedicated tab for anime & animated content  
+📊 **Smart Pagination** - Total counts & estimated pages  
+🎭 **Enhanced Quality Selection** - 4 quality levels, 10+ subtitle languages  
+🌐 **Mirror Servers** - 7 server options for reliability  
+💻 **Cross-Platform Installers** - One-click install for Linux/Mac/Windows/Android
 
+---
 
+## 🎯 Features
 
-## Installation
-
-### For Users (CLI)
-
-Install with command-line interface support:
-
-```sh
-pip install "moviebox-api[cli]"
-```
-
-### For Developers
-
-Install base package for Python integration:
-
-```sh
-pip install moviebox-api
-```
-
-### Media Players (Optional, for Streaming)
-
-To stream content directly without downloading, install [MPV](https://mpv.io/installation) or [VLC](https://www.videolan.org) media players:
+### 🎬 Enhanced Interactive TUI
 
 <details>
-<summary><b>Linux</b></summary>
+<summary><b>📺 Streamlined TV Series</b></summary>
 
-```sh
-# Ubuntu/Debian
-sudo apt install mpv
+- **Direct Episode Access** - Skip action menus, go straight to episodes
+- **Full Season Browser** - See all seasons and episodes instantly
+- **Binge-Watching Friendly** - Optimized for marathon viewing
+- **Episode Counts** - Know exactly how many episodes available
 
-# Fedora/RHEL
-sudo dnf install mpv
-
-# Arch Linux
-sudo pacman -S mpv
-```
 </details>
 
 <details>
-<summary><b>macOS</b></summary>
+<summary><b>🎨 Animation Search</b></summary>
 
-```sh
-# Using Homebrew
-brew install mpv
-```
+- **Dedicated Search Tab** - Menu option [3] for anime/animated content
+- **Specialized Results** - Filtered for animation content
+- **Same Features** - All TUI enhancements work for anime
+
 </details>
 
 <details>
-<summary><b>Windows</b></summary>
+<summary><b>📊 Smart Pagination</b></summary>
 
-Download from [mpv.io/installation](https://mpv.io/installation/)
+- **Total Item Counts** - See total results across all pages
+- **Page Estimates** - "Page 2 of ~9+" display
+- **Better Navigation** - Previous/Next with context
+
 </details>
-
-### Termux Support
 
 <details>
-<summary>Installation for Termux (Android)</summary>
+<summary><b>⚙️ Quality & Subtitles</b></summary>
 
-```sh
-pip install moviebox-api --no-deps
-pip install 'pydantic==2.9.2'
-pip install rich click bs4 httpx throttlebuster
-```
+**Quality Options:**
+- 🎬 BEST - Highest available (Recommended)
+- 📺 1080P - Full HD
+- 💿 720P - HD
+- 📱 480P - SD
+
+**Subtitle Languages:**
+🇮🇩 Indonesian • 🇬🇧 English • 🇪🇸 Spanish • 🇫🇷 French  
+🇨🇳 Chinese • 🇯🇵 Japanese • 🇰🇷 Korean • 🇸🇦 Arabic  
+🇵🇹 Portuguese • 🇷🇺 Russian • + Custom
+
 </details>
 
+### 📥 Core Features
 
+- ⚡ **Super Fast Downloads** - 5x faster than standard downloads
+- 🎥 **Stream with MPV/VLC** - Watch without downloading
+- 📝 **Smart Subtitles** - Auto-download in your language
+- 🔄 **Async Support** - Fully asynchronous operations
+- 🐍 **Clean Python API** - Easy integration with Pydantic models
+- 🔍 **Search & Discovery** - Find trending and popular content
 
-## Quick Start
+---
 
-### Interactive Menu (Easiest)
+## 📦 Installation
 
-Launch the interactive menu for a user-friendly experience:
+### 🚀 Quick Install (Recommended)
 
-```sh
-moviebox-interactive
+Choose your platform:
+
+<details open>
+<summary><b>🐧 Linux / 🍎 macOS</b></summary>
+
+```bash
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+chmod +x install.sh
+./install.sh
 ```
 
-Or:
-
-```sh
+Then activate and run:
+```bash
+source .venv/bin/activate
 moviebox interactive
 ```
 
-The interactive menu provides:
--  Download Movies
--  Download TV Series  
--  Stream Movies with MPV/VLC
--  Stream TV Series with MPV/VLC
--  Discover & Search Content
+</details>
+
+<details>
+<summary><b>🪟 Windows (PowerShell)</b></summary>
+
+```powershell
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+.\install.ps1
+```
+
+Then activate and run:
+```powershell
+.\.venv\Scripts\Activate.ps1
+moviebox interactive
+```
+
+</details>
+
+<details>
+<summary><b>🪟 Windows (CMD)</b></summary>
+
+```cmd
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+install.bat
+```
+
+Then activate and run:
+```cmd
+.venv\Scripts\activate.bat
+moviebox interactive
+```
+
+</details>
+
+<details>
+<summary><b>📱 Android (Termux)</b></summary>
+
+```bash
+pkg install git -y
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+chmod +x install-termux.sh
+./install-termux.sh
+source ~/.bashrc
+moviebox-interactive
+```
+
+**Note:** Use Termux from [F-Droid](https://f-droid.org/), not Play Store!
+
+</details>
+
+### 📚 Detailed Installation
+
+See **[INSTALL.md](./INSTALL.md)** for:
+- Manual installation steps
+- Troubleshooting guide
+- Platform-specific tips
+- Media player setup
+
+### 🎯 Install from PyPI (Original)
+
+For the original package (without enhancements):
+
+```bash
+pip install "moviebox-api[cli]"
+```
+
+**Why install from source instead?**
+- ✅ Get latest enhanced features
+- ✅ Streamlined TV series UX
+- ✅ Animation search tab
+- ✅ Direct episode access
+- ✅ Your custom modifications
+
+---
+
+## 🚀 Quick Start
+
+### Interactive Menu (Easiest)
+
+```bash
+moviebox interactive
+```
+
+```
+╔══════════════════════════════════════════╗
+║                                          ║
+║  🎬 MOVIEBOX - Stream & Download         ║
+║                                          ║
+╚══════════════════════════════════════════╝
+
+[1] 🎬 Search Movies
+[2] 📺 Search TV Series
+[3] 🎨 Search Animation     ← NEW!
+[4] 📚 Search All Content
+[5] ⭐ Trending
+[0] 🚪 Exit
+```
+
+**Enhanced Workflow:**
+
+1. Select **[3] Animation** for anime
+2. Search: *"Demon King Academy"*
+3. **Instantly see episodes** (no action menu!)
+4. Pick episode → Stream or Download
+5. Select quality → Choose subtitles
+6. Watch! 🍿
 
 ### Command Line Examples
 
-**Download a movie:**
-```sh
+```bash
+# Download movie
 moviebox download-movie "Avatar"
-```
 
-**Download a TV series episode:**
-```sh
+# Download TV series episode
 moviebox download-series "Game of Thrones" -s 1 -e 1
+
+# Stream with MPV (requires mpv player)
+moviebox download-movie "Avatar" --stream-via mpv
+
+# Download with specific quality
+moviebox download-movie "Avatar" --quality 1080p
+
+# Download with subtitles
+moviebox download-series "Breaking Bad" -s 1 -e 1 --language Indonesian
 ```
 
-**Stream a movie (requires MPV):**
-```sh
-moviebox download-movie "Avatar" --stream
-```
+### Python API
 
-### Python API Example
-
-**Simple download:**
 ```python
 from moviebox_api import MovieAuto
 import asyncio
@@ -146,615 +249,266 @@ import asyncio
 async def main():
     auto = MovieAuto()
     movie_file, subtitle_file = await auto.run("Avatar")
-    print(f"Movie: {movie_file.saved_to}")
-    print(f"Subtitle: {subtitle_file.saved_to}")
+    print(f"Downloaded: {movie_file.saved_to}")
 
 asyncio.run(main())
 ```
 
-
-
-##  Usage
-
-##  Command Line Interface
-
-### Available Commands
-
-```sh
-moviebox --help
-```
-
-**Commands:**
-- `download-movie` - Search and download a movie
-- `download-series` - Search and download TV series episodes
-- `interactive` - Launch interactive menu interface
-- `homepage-content` - Show trending content
-- `popular-search` - Show popular searches
-- `item-details` - Get details about a movie/series
-- `mirror-hosts` - Discover available mirror hosts
-
-### Interactive Menu Guide
-
-The interactive menu offers a clean, numbered interface:
-
-```text
-┌┬┐┌─┐┬  ┬┬┌─┐┌┐ ┌─┐─┐ ┬ 
-││││ │└┐┌┘│├┤ ├┴┐│ │┌┴┬┘ 
-┴ ┴└─┘ └┘ ┴└─┘└─┘└─┘┴ └─ 
-
-DOWNLOAD OPTIONS
-[1] Download Movie
-[2] Download TV Series
-
-STREAMING OPTIONS
-[3] Stream Movie
-[4] Stream TV Series
-
-DISCOVER & INFO
-[5] Show Homepage Content
-[6] Show Popular Searches
-[7] Show Mirror Hosts
-
-[0] Exit
-```
-
-<details>
-<summary><b>Navigation Tips</b></summary>
-
-- Type a number (0-7) and press Enter
-- Follow on-screen prompts
-- Press `Ctrl+C` to exit anytime
-- Press Enter without typing to use defaults
-
-</details>
-
-<details>
-<summary><b>Quality Options</b></summary>
-
-- `Best` - Highest available quality (recommended)
-- `1080p` - Full HD (1920×1080)
-- `720p` - HD (1280×720)
-- `480p` - Standard Definition
-- `360p` - Low quality, smaller file size
-- `Worst` - Lowest available quality
-
-</details>
-
-<details>
-<summary><b>Subtitle Options</b></summary>
-
-- `Yes` - Download with subtitles (default)
-- `No` - Download without subtitles
-- `Subtitles only` - Download only subtitle files
-
-</details>
-
-### Download Commands
-
-<details>
-<summary><b>Download Movie</b></summary>
-
-**Basic usage:**
-```sh
-moviebox download-movie "Avatar"
-```
-
-**With options:**
-```sh
-# Specific quality
-moviebox download-movie "Avatar" --quality 1080p
-
-# With year filter
-moviebox download-movie "Avatar" --year 2009
-
-# Custom directory
-moviebox download-movie "Avatar" --dir ~/Movies
-
-# Without subtitles
-moviebox download-movie "Avatar" --no-caption
-
-# Auto-confirm (no prompts)
-moviebox download-movie "Avatar" --yes
-```
-
-**Common options:**
-- `-y, --year` - Filter by release year
-- `-q, --quality` - Video quality (best, 1080p, 720p, 480p, 360p, worst)
-- `-d, --dir` - Download directory
-- `-x, --language` - Subtitle language (default: English)
-- `--no-caption` - Skip subtitle download
-- `-Y, --yes` - Auto-confirm without prompts
-
-[View all options](#download-movie-full-options)
-
-</details>
-
-<details>
-<summary><b>Download TV Series</b></summary>
-
-**Basic usage:**
-```sh
-moviebox download-series "Game of Thrones" -s 1 -e 1
-```
-
-**Download multiple episodes:**
-```sh
-# Download 5 episodes starting from S01E01
-moviebox download-series "Game of Thrones" -s 1 -e 1 -l 5
-
-# Download entire season
-moviebox download-series "Game of Thrones" -s 1 -e 1 -l 100
-```
-
-**With options:**
-```sh
-# Specific quality
-moviebox download-series "Merlin" -s 1 -e 1 --quality 720p
-
-# Auto-confirm
-moviebox download-series "Merlin" -s 1 -e 1 --yes
-
-# Custom directory
-moviebox download-series "Merlin" -s 1 -e 1 --dir ~/Series
-```
-
-**Download entire tv-series**
-
-```sh
-moviebox download-series "Merlin" -s 1 -e 1 --auto-mode
-# This will download episodes across all available seasons
-```
-
-**Required options:**
-- `-s, --season` - Season number (required)
-- `-e, --episode` - Starting episode number (required)
-
-**Common options:**
-- `-l, --limit` - Number of episodes to download (default: 1)
-- `-q, --quality` - Video quality
-- `-x, --language` - Subtitle language
-- `--no-caption` - Skip subtitles
-- `-Y, --yes` - Auto-confirm
-
-[View all options](#download-series-full-options)
-
-</details>
-
 ---
 
-<details id="download-movie-full-options">
-<summary><b>Download Movie - All Options</b></summary>
+## 📖 Documentation
 
-```text
-# python -m moviebox_api download-movie --help
+### 📚 Guides
 
-Usage: python -m moviebox_api download-movie [OPTIONS] TITLE
+- **[Installation Guide](./INSTALL.md)** - Detailed setup for all platforms
+- **[API Documentation](./docs/README.md)** - Full API reference
+- **[Examples](./docs/examples/)** - Code examples and use cases
 
-  Search and download or stream movie.
-
-Options:
-  -y, --year INTEGER              Year filter for the movie to proceed with
-                                  [default: 0]
-  -q, --quality [worst|best|360p|480p|720p|1080p]
-                                  Media quality to be downloaded  [default:
-                                  BEST]
-  -d, --dir DIRECTORY             Directory for saving the movie to  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -D, --caption-dir DIRECTORY     Directory for saving the caption file to
-                                  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -m, --mode [start|resume|auto]  Start the download, resume or set
-                                  automatically  [default: auto]
-  -x, --language TEXT             Caption language filter  [default: English]
-  -M, --movie-filename-tmpl TEXT  Template for generating movie filename
-                                  [default: {title} ({release_year}).{ext}]
-  -C, --caption-filename-tmpl TEXT
-                                  Template for generating caption filename
-                                  [default: {title}
-                                  ({release_year}).{lan}.{ext}]
-  -t, --tasks INTEGER RANGE       Number of tasks to carry out the download
-                                  [default: 5; 1<=x<=1000]
-  -P, --part-dir DIRECTORY        Directory for temporarily saving the
-                                  downloaded file-parts to  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -E, --part-extension TEXT       Filename extension for download parts
-                                  [default: .part]
-  -N, --chunk-size INTEGER        Streaming download chunk size in kilobytes
-                                  [default: 256]
-  -R, --timeout-retry-attempts INTEGER
-                                  Number of times to retry download upon read
-                                  request timing out  [default: 10]
-  -B, --merge-buffer-size INTEGER RANGE
-                                  Buffer size for merging the separated files
-                                  in kilobytes [default : CHUNK_SIZE]
-                                  [1<=x<=102400]
-  -X, --stream-via [mpv|vlc]      Stream directly using the chosen media
-                                  player instead of downloading
-  -c, --colour TEXT               Progress bar display colour  [default: cyan]
-  -U, --ascii                     Use unicode (smooth blocks) to fill the
-                                  progress-bar meter
-  -z, --disable-progress-bar      Do not show download progress-bar
-  -I, --ignore-missing-caption    Proceed to download movie file even when
-                                  caption file is missing
-  --leave / --no-leave            Keep all leaves of the progress-bar
-                                  [default: no-leave]
-  --caption / --no-caption        Download caption file  [default: caption]
-  -O, --caption-only              Download caption file only and ignore movie
-  -S, --simple                    Show download percentage and bar only in
-                                  progressbar
-  -T, --test                      Just test if download is possible but do not
-                                  actually download
-  -V, --verbose                   Show more detailed interactive texts
-  -Q, --quiet                     Disable showing interactive texts on the
-                                  progress (logs)
-  -Y, --yes                       Do not prompt for movie confirmation
-  -h, --help                      Show this message and exit.
-```
-
-</details>
-
-<details id="download-series-full-options">
-<summary><b>Download Series - All Options</b></summary>
-
-```text
-# python -m moviebox_api download-series --help
-
-Usage: python -m moviebox_api download-series [OPTIONS] TITLE
-
-  Search and download or stream tv series.
-
-Options:
-  -y, --year INTEGER              Year filter for the series to proceed with :
-                                  0  [default: 0]
-  -s, --season INTEGER RANGE      TV Series season filter  [1<=x<=1000;
-                                  required]
-  -e, --episode INTEGER RANGE     Episode offset of the tv-series season
-                                  [1<=x<=1000; required]
-  -l, --limit INTEGER RANGE       Total number of episodes to download in the
-                                  season  [default: 1; 1<=x<=1000]
-  -q, --quality [worst|best|360p|480p|720p|1080p]
-                                  Media quality to be downloaded  [default:
-                                  BEST]
-  -x, --language TEXT             Caption language filter  [default: English]
-  -d, --dir DIRECTORY             Directory for saving the series file to
-                                  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -D, --caption-dir DIRECTORY     Directory for saving the caption file to
-                                  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -m, --mode [start|resume|auto]  Start new download, resume or set
-                                  automatically  [default: auto]
-  -L, --episode-filename-tmpl TEXT
-                                  Template for generating series episode
-                                  filename  [default: {title}
-                                  S{season}E{episode}.{ext}]
-  -C, --caption-filename-tmpl TEXT
-                                  Template for generating caption filename
-                                  [default: {title}
-                                  S{season}E{episode}.{lan}.{ext}]
-  -t, --tasks INTEGER RANGE       Number of tasks to carry out the download
-                                  [default: 5; 1<=x<=1000]
-  -P, --part-dir DIRECTORY        Directory for temporarily saving the
-                                  downloaded file-parts to  [default:
-                                  /home/smartwa/git/smartwa/moviebox-api]
-  -f, --format [standard|group|struct]
-                                  Ways of formating filename and saving the
-                                  episodes.  group -> Organize episodes into
-                                  separate folders based on seasons e.g
-                                  Merlin/S1/Merlin S1E2.mp4 struct -> Save
-                                  episodes in a hierarchical directory
-                                  structure e.g Merlin (2009)/S1/E1.mp4
-  -E, --part-extension TEXT       Filename extension for download parts
-                                  [default: .part]
-  -N, --chunk-size INTEGER        Streaming download chunk size in kilobytes
-                                  [default: 256]
-  -R, --timeout-retry-attempts INTEGER
-                                  Number of times to retry download upon read
-                                  request timing out  [default: 10]
-  -B, --merge-buffer-size INTEGER RANGE
-                                  Buffer size for merging the separated files
-                                  in kilobytes [default : CHUNK_SIZE]
-                                  [1<=x<=102400]
-  -X, --stream-via [mpv|vlc]      Stream directly using the chosen media
-                                  player instead of downloading
-  -c, --colour TEXT               Progress bar display color  [default: cyan]
-  -U, --ascii                     Use unicode (smooth blocks) to fill the
-                                  progress-bar meter
-  -z, --disable-progress-bar      Do not show download progress-bar
-  -I, --ignore-missing-caption    Proceed to download episode file even when
-                                  caption file is missing
-  --leave / --no-leave            Keep all leaves of the progressbar
-                                  [default: no-leave]
-  --caption / --no-caption        Download caption file  [default: caption]
-  -O, --caption-only              Download caption file only and ignore movie
-  -A, --auto-mode                 When limit is 1 (default), download entire
-                                  remaining seasons.
-  -S, --simple                    Show download percentage and bar only in
-                                  progressbar
-  -T, --test                      Just test if download is possible but do not
-                                  actually download
-  -V, --verbose                   Show more detailed interactive texts
-  -Q, --quiet                     Disable showing interactive texts on the
-                                  progress (logs)
-  -Y, --yes                       Do not prompt for tv-series confirmation
-  -h, --help                      Show this message and exit.
-```
-
-</details>
-
----
-
-### Streaming via Media Players
-
-Stream content directly without downloading (requires MPV or VLC player):
+### ⚡ Quick Reference
 
 <details>
-<summary><b>Stream Movies</b></summary>
+<summary><b>Download Commands</b></summary>
 
-```sh
-# Stream a movie
-moviebox download-movie "Avatar" --stream-via vlc
+**Movies:**
+```bash
+moviebox download-movie "Title" [OPTIONS]
+  -y, --year YEAR           Filter by year
+  -q, --quality QUALITY     Video quality
+  -x, --language LANGUAGE   Subtitle language
+  -Y, --yes                 Auto-confirm
+  -X, --stream-via PLAYER   Stream instead of download
+```
 
-# Stream with subtitles
-moviebox download-movie "Avatar" --stream-via mpv --caption
+**TV Series:**
+```bash
+moviebox download-series "Title" -s SEASON -e EPISODE [OPTIONS]
+  -l, --limit NUMBER        Episodes to download
+  -A, --auto-mode          Download all seasons
+  --format group           Organize by season folders
+```
 
-# Stream with specific language subtitles
-moviebox download-movie "Avatar" --stream-via vlc --caption --language French
+</details>
 
-# Stream specific quality
+<details>
+<summary><b>Mirror Servers</b></summary>
+
+If default server is slow or blocked:
+
+```bash
+# Show available mirrors
+moviebox mirror-hosts
+
+# Set environment variable
+export MOVIEBOX_API_HOST="h5.aoneroom.com"  # Linux/Mac
+set MOVIEBOX_API_HOST=h5.aoneroom.com       # Windows
+```
+
+Available mirrors:
+- h5.aoneroom.com
+- movieboxapp.in
+- moviebox.pk
+- moviebox.ph
+- moviebox.id
+- v.moviebox.ph
+- netnaija.video
+
+</details>
+
+<details>
+<summary><b>Media Players</b></summary>
+
+**Install MPV (Recommended):**
+
+```bash
+# Ubuntu/Debian
+sudo apt install mpv
+
+# macOS
+brew install mpv
+
+# Windows
+# Download from https://mpv.io/installation/
+
+# Termux
+pkg install mpv
+```
+
+**Stream Example:**
+```bash
 moviebox download-movie "Avatar" --stream-via mpv --quality 720p
 ```
 
 </details>
 
-<details>
-<summary><b>Stream TV Series</b></summary>
+---
 
-```sh
-# Stream an episode
-moviebox download-series "Game of Thrones" -s 1 -e 1 --stream-via vlc
+## 🎨 Features Showcase
 
-# Stream with subtitles
-moviebox download-series "Game of Thrones" -s 1 -e 1 --stream-via vlc --caption
+### Before vs After
 
-# Stream specific quality
-moviebox download-series "Breaking Bad" -s 1 -e 1 --stream-via vlc --quality 1080p
+**Before (Original):**
+```
+TV Series → Actions Menu → [3] View Episodes → Episodes
+3 clicks, slow navigation
 ```
 
-</details>
-
-**Streaming Features:**
--  No download required - watch immediately
--  Automatic subtitle integration
--  Proper HTTP header handling
--  Auto-cleanup of temporary files
--  Requires `moviebox-api[cli]` installation
--  Requires MPV/VLC media player installed
-
-
-
-##  Python API
-
-### Simple Auto-Download
-
-The easiest way to download content:
-
-```python
-from moviebox_api import MovieAuto
-import asyncio
-
-async def main():
-    auto = MovieAuto()
-    
-    # Download movie with subtitle
-    movie_file, subtitle_file = await auto.run("Avatar")
-    print(f"Movie saved to: {movie_file.saved_to}")
-    print(f"Subtitle saved to: {subtitle_file.saved_to}")
-
-asyncio.run(main())
+**After (Enhanced):**
+```
+TV Series → Episodes Immediately! ✨
+1 click, instant access
 ```
 
-### Download with Progress Tracking
+### Enhanced Features
 
-Monitor download progress in real-time:
+| Feature | Original | Enhanced | Benefit |
+|---------|----------|----------|---------|
+| TV Series Access | 3 clicks | 1 click | ⚡ Faster |
+| Animation Search | No | Yes | 🎨 Dedicated |
+| Pagination Info | Basic | Smart | 📊 Detailed |
+| Subtitle Languages | Manual | 10+ options | 🌍 Global |
+| Episode Data | Limited | Complete | 📺 Full info |
+| Installation | Pip only | 4 platforms | 💻 Universal |
 
-```python
-from moviebox_api import DownloadTracker, MovieAuto
-import asyncio
+---
 
-async def progress_callback(progress: DownloadTracker):
-    percent = (progress.downloaded_size / progress.expected_size) * 100
-    print(f"[{percent:.2f}%] Downloading {progress.saved_to.name}", end="\r")
+## 🛠️ Advanced Usage
 
-async def main():
-    auto = MovieAuto()
-    await auto.run("Avatar", progress_hook=progress_callback)
+### Batch Downloads
 
-asyncio.run(main())
+Download entire series:
+```bash
+moviebox download-series "Breaking Bad" -s 1 -e 1 --auto-mode
 ```
 
-### Advanced Control with Downloader
-
-For more control over the download process:
-
-<details>
-<summary><b>Download Movie with Confirmation</b></summary>
-
-```python
-from moviebox_api.cli import Downloader
-import asyncio
-
-async def main():
-    downloader = Downloader()
-    
-    # User will be prompted to confirm the movie
-    movie_file, subtitle_files = await downloader.download_movie("Avatar")
-    
-    print(f"Downloaded: {movie_file}")
-    print(f"Subtitles: {subtitle_files}")
-
-asyncio.run(main())
+Organize by folders:
+```bash
+moviebox download-series "Game of Thrones" -s 1 -e 1 \
+  --auto-mode --format group
 ```
-
-</details>
-
-<details>
-<summary><b>Download TV Series Episodes</b></summary>
-
-```python
-from moviebox_api.cli import Downloader
-import asyncio
-
-async def main():
-    downloader = Downloader()
-    
-    # Download first 2 episodes of season 1
-    episodes_map = await downloader.download_tv_series(
-        "Merlin",
-        season=1,
-        episode=1,
-        limit=2
-        # limit = 1 
-        # auto_mode = True # Download entire remaining seasons when limit=1
-    )
-    
-    print(f"Downloaded episodes: {episodes_map}")
-
-asyncio.run(main())
-```
-
-</details>
 
 ### Custom Configuration
 
 ```python
 from moviebox_api import MovieAuto
-import asyncio
 
-async def main():
-    # Customize download behavior
-    auto = MovieAuto(
-        caption_language="Spanish",  # Change subtitle language
-        quality="720p",              # Set default quality
-        download_dir="~/Downloads"   # Custom download directory
-    )
-    
-    movie_file, subtitle_file = await auto.run("Avatar")
-
-asyncio.run(main())
+auto = MovieAuto(
+    caption_language="Spanish",
+    quality="720p",
+    download_dir="~/Movies"
+)
 ```
 
-##  Documentation
+### Progress Tracking
 
-For comprehensive documentation with more examples:
+```python
+async def progress_callback(progress):
+    percent = (progress.downloaded_size / progress.expected_size) * 100
+    print(f"[{percent:.1f}%] {progress.saved_to.name}")
 
-- **[Full API Documentation](./docs/README.md)**
-- **[Example Scripts](./docs/examples/)**
-  - [Download Movie CLI](./docs/examples/download-movie-cli.py)
-  - [Download Series CLI](./docs/examples/download-series-cli.py)
-  - [Extractor Benchmark](./docs/examples/extractors-benchmark.py)
-
-
-##  Advanced Configuration
-
-### Using Mirror Hosts
-
-Moviebox.ph has [multiple mirror hosts](https://github.com/Simatwa/moviebox-api/issues/27). To use a specific mirror:
-
-```sh
-# Linux/macOS
-export MOVIEBOX_API_HOST="h5.aoneroom.com"
-
-# Windows (CMD)
-set MOVIEBOX_API_HOST=h5.aoneroom.com
-
-# Windows (PowerShell)
-$env:MOVIEBOX_API_HOST="h5.aoneroom.com"
+await auto.run("Avatar", progress_hook=progress_callback)
 ```
-
-Or discover available mirrors:
-
-```sh
-moviebox mirror-hosts
-```
-
-### Command Shortcuts
-
-```sh
-# Instead of:
-python -m moviebox_api download-movie "Avatar"
-
-# Use:
-moviebox download-movie "Avatar"
-```
-
-## Usage Tips
-
-### Grouping Episodes
-
-Organize episodes into separate folders based on seasons:
-
-```sh
-$ moviebox download-series Merlin -s 1 -e 1 --auto-mode --format group
-```
-
-```
-./
-  Merlin (2009)/
-    S1/
-      Merlin S1E1.mp4
-      Merlin S1E2.mp4
-    S2/
-      Merlin S2E1.mp4
-      Merlin S2E2.mp4
-```
-
-This structure keeps related episodes together within their season folders.
-
-### Directory Structure
-
-Save episodes in a hierarchical directory structure:
-
-```sh
-$ moviebox download-series Merlin -s 1 -e 1 --auto-mode --format struct
-```
-
-```
-./
-  Merlin (2009)/
-    S1/
-      E1.mp4
-      E2.mp4
-    S2/
-      E1.mp4
-      E2.mp4
-```
-
-This layout mirrors the TV series' episode order, making it easy to navigate and find specific episodes.
-
-
-##  Disclaimer
-
-> "All videos and pictures on MovieBox are from the Internet, and their copyrights belong to the original creators. We only provide webpage services and do not store, record, or upload any content."  
-> — *moviebox.ph (Sunday, July 13th, 2025)*
-
-
-##  Contributors
-
-We appreciate all contributions to this project! Thank you to everyone who has helped improve moviebox-api.
-
-<div align="center">
-
-<a href="https://github.com/Simatwa/moviebox-api/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Simatwa/moviebox-api" />
-</a>
-
-</div>
-
-
-<div align="center">
 
 ---
-**Made with ❤️**
+
+## 🔧 Troubleshooting
+
+<details>
+<summary><b>Virtual Environment Issues</b></summary>
+
+**"externally-managed-environment" error:**
+
+The installer automatically handles this by using venv pip directly.
+
+**Manual fix:**
+```bash
+.venv/bin/pip install -e ".[cli]"  # Use venv pip explicitly
+```
+
+</details>
+
+<details>
+<summary><b>Windows PowerShell Security</b></summary>
+
+**"Cannot load script" error:**
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+</details>
+
+<details>
+<summary><b>Termux Installation</b></summary>
+
+**Package errors:**
+```bash
+pkg update && pkg upgrade
+pkg install python build-essential
+```
+
+**Use F-Droid version** for best compatibility.
+
+</details>
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! This is an enhanced fork focused on TUI improvements.
+
+**Original Repository:** [Simatwa/moviebox-api](https://github.com/Simatwa/moviebox-api)
+
+### Development Setup
+
+```bash
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[cli]"
+```
+
+---
+
+## 📜 License
+
+This is free and unencumbered software released into the **public domain** (Unlicense).
+
+See [LICENSE](./LICENSE) for details.
+
+---
+
+## ⚠️ Disclaimer
+
+> "All videos and pictures on MovieBox are from the Internet, and their copyrights belong to the original creators. We only provide webpage services and do not store, record, or upload any content."  
+> — *moviebox.ph*
+
+This tool is for educational purposes. Respect copyright laws in your jurisdiction.
+
+---
+
+## 🌟 Acknowledgments
+
+- **Original Author:** [Simatwa](https://github.com/Simatwa) for the amazing base project
+- **Contributors:** See [contributors page](https://github.com/Simatwa/moviebox-api/graphs/contributors)
+- **You:** For using and improving this project!
+
+---
+
+<div align="center">
+
+### 🎬 Ready to Watch?
+
+```bash
+git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+cd moviebox-api
+./install.sh
+source .venv/bin/activate
+moviebox interactive
+```
+
+**Made with ❤️ for the community**
+
+[⬆ Back to Top](#-moviebox-enhanced)
 
 </div>
