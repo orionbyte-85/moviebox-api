@@ -99,7 +99,7 @@ Choose your platform:
 <summary><b>🐧 Linux / 🍎 macOS</b></summary>
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 chmod +x install.sh
 ./install.sh
@@ -117,7 +117,7 @@ moviebox interactive
 <summary><b>🪟 Windows (PowerShell)</b></summary>
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 .\install.ps1
 ```
@@ -134,7 +134,7 @@ moviebox interactive
 <summary><b>🪟 Windows (CMD)</b></summary>
 
 ```cmd
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 install.bat
 ```
@@ -152,7 +152,7 @@ moviebox interactive
 
 ```bash
 pkg install git -y
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 chmod +x install-termux.sh
 ./install-termux.sh
@@ -461,7 +461,7 @@ Contributions welcome! This is an enhanced fork focused on TUI improvements.
 ### Development Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 python -m venv .venv
 source .venv/bin/activate
@@ -500,7 +500,7 @@ This tool is for educational purposes. Respect copyright laws in your jurisdicti
 ### 🎬 Ready to Watch?
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 ./install.sh
 source .venv/bin/activate
