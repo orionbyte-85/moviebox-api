@@ -8,7 +8,7 @@ Complete installation guide for all platforms.
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 
 # Run installer
@@ -22,7 +22,7 @@ moviebox interactive
 
 **One-liner install:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git && cd moviebox-api && chmod +x install.sh && ./install.sh
+git clone https://github.com/orionbyte-85/moviebox-api.git && cd moviebox-api && chmod +x install.sh && ./install.sh
 ```
 
 ---
@@ -33,7 +33,7 @@ Same as Linux:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 
 # Run installer
@@ -58,7 +58,7 @@ brew install mpv
 
 ```powershell
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 
 # Run installer
@@ -73,7 +73,7 @@ moviebox interactive
 
 ```cmd
 REM Clone your fork
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 
 REM Run installer
@@ -102,7 +102,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 pkg install git
 
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/moviebox-api.git
+git clone https://github.com/orionbyte-85/moviebox-api.git
 cd moviebox-api
 
 # Run Termux installer
@@ -118,7 +118,7 @@ moviebox-interactive
 
 **Quick Install (One-liner):**
 ```bash
-pkg install git -y && git clone https://github.com/YOUR_USERNAME/moviebox-api.git && cd moviebox-api && chmod +x install-termux.sh && ./install-termux.sh
+pkg install git -y && git clone https://github.com/orionbyte-85/moviebox-api.git && cd moviebox-api && chmod +x install-termux.sh && ./install-termux.sh
 ```
 
 ---
@@ -244,7 +244,7 @@ pip install -e ".[cli]"
 
 ## 📚 More Help
 
-- Issues: https://github.com/YOUR_USERNAME/moviebox-api/issues
+- Issues: https://github.com/orionbyte-85/moviebox-api/issues
 - Original Repo: https://github.com/Simatwa/moviebox-api
 - Documentation: See README.md
 
