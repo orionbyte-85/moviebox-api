@@ -47,7 +47,7 @@ echo ""
 
 # Install pip packages
 echo -e "${BLUE}[4/6]${NC} Installing Python packages..."
-pip install --upgrade pip --quiet
+# pip install --upgrade pip --quiet
 
 # Termux requires special installation (no deps first)
 echo "Installing moviebox-api (this may take a few minutes)..."
